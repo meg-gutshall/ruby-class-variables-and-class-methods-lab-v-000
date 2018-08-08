@@ -1,20 +1,24 @@
 require 'pry'
 
 class Song
+  #setting attribute accessors for instance variables
   attr_accessor :name, :artist, :genre
+  #setting class variables
   @@count = 0
   @@genres = []
   @@artists = []
 
   def initialize(name, artist, genre)
+    #initialize instance variables upon creation of a new song (instance)
     @name = name
     @artist = artist
     @genre = genre
-    @@count += 1
-    @@genres << genre
-    @@artists << artist
+    @@count += 1          #add one to the Song class count
+    @@genres << genre     #add new song genre to genres class variable
+    @@artists << artist   #add new song artist to artists class variable
   end
 
+    #return how many songs are in the Song class
   def self.count
     @@count
   end
