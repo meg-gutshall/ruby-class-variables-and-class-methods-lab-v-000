@@ -1,15 +1,15 @@
 require 'pry'
 
 class Song
-  #setting attribute accessors for instance variables
+    #setting attribute accessors for instance variables
   attr_accessor :name, :artist, :genre
-  #setting class variables
+    #setting class variables
   @@count = 0
   @@genres = []
   @@artists = []
 
   def initialize(name, artist, genre)
-    #initialize instance variables upon creation of a new song (instance)
+      #initialize instance variables upon creation of a new song (instance)
     @name = name
     @artist = artist
     @genre = genre
@@ -23,9 +23,11 @@ class Song
     @@count
   end
 
+    #return an array of genres without duplicates
   def self.genres
     @@genres.uniq
   end
+
 
   def self.genre_count
     genre_count_hash = {}
@@ -39,6 +41,7 @@ class Song
     genre_count_hash
   end
 
+    #return an array of artists without duplicates
   def self.artists
     @@artists.uniq
   end
