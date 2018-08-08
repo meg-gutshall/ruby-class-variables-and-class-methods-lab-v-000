@@ -28,7 +28,7 @@ class Song
     @@genres.uniq
   end
 
-
+    #return genres by name and number of songs in a hash
   def self.genre_count
     genre_count_hash = {}
     @@genres.each do |g|
@@ -46,6 +46,7 @@ class Song
     @@artists.uniq
   end
 
+    #return artists by name and number of songs in a hash
   def self.artist_count
     artist_count_hash = {}
     @@artists.each do |g|
